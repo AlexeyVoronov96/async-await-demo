@@ -16,8 +16,14 @@ struct MainView: View {
     }
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(viewModel.topHeadlines, id: \.self) { article in
+            Text(article.title ?? "")
+        }
+        .onAppear {
+            async {
+                await viewModel.getArticles()
+            }
+        }
     }
 }
 

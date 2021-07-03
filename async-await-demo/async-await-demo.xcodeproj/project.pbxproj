@@ -21,6 +21,7 @@
 		AB785B0C269100D700DC3DE7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785B0B269100D700DC3DE7 /* MainViewModel.swift */; };
 		AB785B0E2691040B00DC3DE7 /* MainViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785B0D2691040B00DC3DE7 /* MainViewConfigurator.swift */; };
 		AB785B102691055100DC3DE7 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785B0F2691055100DC3DE7 /* NewsService.swift */; };
+		AB785B132691090A00DC3DE7 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785B122691090A00DC3DE7 /* Articles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		AB785B0B269100D700DC3DE7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		AB785B0D2691040B00DC3DE7 /* MainViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewConfigurator.swift; sourceTree = "<group>"; };
 		AB785B0F2691055100DC3DE7 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		AB785B122691090A00DC3DE7 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				AB785AF52690F03000DC3DE7 /* Network */,
 				AB785AF42690F02000DC3DE7 /* Services */,
 				AB785AFD2690F1CD00DC3DE7 /* Tools */,
+				AB785B11269108A700DC3DE7 /* Models */,
 				AB785B072691004500DC3DE7 /* Modules */,
 				AB785AE62690EDFC00DC3DE7 /* async_await_demoApp.swift */,
 				AB785AEA2690EE0000DC3DE7 /* Assets.xcassets */,
@@ -153,6 +156,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		AB785B11269108A700DC3DE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB785B122691090A00DC3DE7 /* Articles.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,6 +236,7 @@
 			files = (
 				AB785AFF2690F1DC00DC3DE7 /* Settings.swift in Sources */,
 				AB785AE92690EDFC00DC3DE7 /* MainView.swift in Sources */,
+				AB785B132691090A00DC3DE7 /* Articles.swift in Sources */,
 				AB785B022690F9F200DC3DE7 /* Injected.swift in Sources */,
 				AB785AFC2690F0C400DC3DE7 /* NewsEndpoint.swift in Sources */,
 				AB785B042690FB5D00DC3DE7 /* DependencyStore.swift in Sources */,

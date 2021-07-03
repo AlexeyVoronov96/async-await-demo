@@ -26,7 +26,7 @@ extension NewsEndpoint: Endpoint {
     var params: [String: String] {
         switch self {
         case .getTopHeadlines:
-            return ["region": region]
+            return ["country": region]
         }
     }
     

@@ -15,7 +15,7 @@ final class MainViewModel: ObservableObject {
         self.newsService = newsService
     }
     
-    @Published private(set) var topHeadlines: [String] = []
+    @Published private(set) var topHeadlines: Articles = []
     
     func getArticles() async {
         do {
