@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct async_await_demoApp: App {
+    
+    init() {
+        DependenciesConfigurator.registerDependencies()
+    }
+    
     var body: some Scene {
         WindowGroup {
             MainView()
