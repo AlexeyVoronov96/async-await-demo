@@ -84,3 +84,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+async-await-demo/async-await-demo/.DS_Store
+async-await-demo/.DS_Store
+.DS_Store
