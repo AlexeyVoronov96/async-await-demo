@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @ObservedObject var viewModel: MainViewModel
+    
+    init(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
@@ -16,6 +23,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainViewConfigurator.configure()
     }
 }

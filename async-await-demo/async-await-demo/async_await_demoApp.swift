@@ -16,7 +16,7 @@ struct async_await_demoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainViewConfigurator.configure()
         }
     }
 }
