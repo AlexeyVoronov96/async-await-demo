@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		AB785AE72690EDFC00DC3DE7 /* async_await_demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785AE62690EDFC00DC3DE7 /* async_await_demoApp.swift */; };
-		AB785AE92690EDFC00DC3DE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785AE82690EDFC00DC3DE7 /* ContentView.swift */; };
+		AB785AE92690EDFC00DC3DE7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785AE82690EDFC00DC3DE7 /* MainView.swift */; };
 		AB785AEB2690EE0000DC3DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB785AEA2690EE0000DC3DE7 /* Assets.xcassets */; };
 		AB785AEE2690EE0000DC3DE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB785AED2690EE0000DC3DE7 /* Preview Assets.xcassets */; };
+		AB785AF72690F04800DC3DE7 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785AF62690F04800DC3DE7 /* NetworkProvider.swift */; };
+		AB785AFA2690F06D00DC3DE7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785AF92690F06D00DC3DE7 /* Endpoint.swift */; };
+		AB785AFC2690F0C400DC3DE7 /* NewsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785AFB2690F0C400DC3DE7 /* NewsEndpoint.swift */; };
+		AB785AFF2690F1DC00DC3DE7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785AFE2690F1DC00DC3DE7 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB785AE32690EDFC00DC3DE7 /* async-await-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "async-await-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB785AE62690EDFC00DC3DE7 /* async_await_demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = async_await_demoApp.swift; sourceTree = "<group>"; };
-		AB785AE82690EDFC00DC3DE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB785AE82690EDFC00DC3DE7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AB785AEA2690EE0000DC3DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB785AED2690EE0000DC3DE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB785AF62690F04800DC3DE7 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		AB785AF92690F06D00DC3DE7 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		AB785AFB2690F0C400DC3DE7 /* NewsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndpoint.swift; sourceTree = "<group>"; };
+		AB785AFE2690F1DC00DC3DE7 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,11 @@
 		AB785AE52690EDFC00DC3DE7 /* async-await-demo */ = {
 			isa = PBXGroup;
 			children = (
+				AB785AFD2690F1CD00DC3DE7 /* Tools */,
+				AB785AF52690F03000DC3DE7 /* Network */,
+				AB785AF42690F02000DC3DE7 /* Services */,
 				AB785AE62690EDFC00DC3DE7 /* async_await_demoApp.swift */,
-				AB785AE82690EDFC00DC3DE7 /* ContentView.swift */,
+				AB785AE82690EDFC00DC3DE7 /* MainView.swift */,
 				AB785AEA2690EE0000DC3DE7 /* Assets.xcassets */,
 				AB785AEC2690EE0000DC3DE7 /* Preview Content */,
 			);
@@ -65,6 +76,39 @@
 				AB785AED2690EE0000DC3DE7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB785AF42690F02000DC3DE7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AB785AF52690F03000DC3DE7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AB785AF82690F05800DC3DE7 /* Endpoints */,
+				AB785AF62690F04800DC3DE7 /* NetworkProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AB785AF82690F05800DC3DE7 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				AB785AF92690F06D00DC3DE7 /* Endpoint.swift */,
+				AB785AFB2690F0C400DC3DE7 /* NewsEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		AB785AFD2690F1CD00DC3DE7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				AB785AFE2690F1DC00DC3DE7 /* Settings.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB785AE92690EDFC00DC3DE7 /* ContentView.swift in Sources */,
+				AB785AFF2690F1DC00DC3DE7 /* Settings.swift in Sources */,
+				AB785AE92690EDFC00DC3DE7 /* MainView.swift in Sources */,
+				AB785AFC2690F0C400DC3DE7 /* NewsEndpoint.swift in Sources */,
 				AB785AE72690EDFC00DC3DE7 /* async_await_demoApp.swift in Sources */,
+				AB785AFA2690F06D00DC3DE7 /* Endpoint.swift in Sources */,
+				AB785AF72690F04800DC3DE7 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +325,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +355,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
