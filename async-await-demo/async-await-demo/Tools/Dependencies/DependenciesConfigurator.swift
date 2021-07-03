@@ -16,5 +16,8 @@ final class DependenciesConfigurator {
         store.register(
             NetworkProvider<NewsEndpoint>(), for: NetworkProvider<NewsEndpoint>.self
         )
+        
+        // News Service
+        store.register(NewsService(), for: NewsServiceProtocol.self)
     }
 }

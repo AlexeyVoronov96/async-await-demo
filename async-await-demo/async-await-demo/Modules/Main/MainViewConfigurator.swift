@@ -10,7 +10,7 @@ import SwiftUI
 struct MainViewConfigurator {
     
     static func configure() -> some View {
-        let viewModel = MainViewModel(newsService: NewsService())
+        let viewModel = MainViewModel()
         
         let view = MainView(viewModel: viewModel)
         

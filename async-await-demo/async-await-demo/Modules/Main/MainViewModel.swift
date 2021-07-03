@@ -9,11 +9,7 @@ import Foundation
 
 final class MainViewModel: ObservableObject {
     
-    private let newsService: NewsServiceProtocol
-    
-    init(newsService: NewsServiceProtocol) {
-        self.newsService = newsService
-    }
+    @Injected var newsService: NewsServiceProtocol
     
     @Published private(set) var topHeadlines: Articles = []
     
