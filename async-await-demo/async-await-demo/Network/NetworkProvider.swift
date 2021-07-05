@@ -68,7 +68,7 @@ private extension NetworkProvider {
     // MARK: - Getting data
     func loadData(with request: URLRequest) async throws -> Data {
         let (data, response) = try await URLSession.shared.data(for: request)
-        guard (200...300).contains((response as! HTTPURLResponse).statusCode) else {
+        guard (200..<300).contains((response as! HTTPURLResponse).statusCode) else {
             throw Errors.wrongResponse
         }
         return data

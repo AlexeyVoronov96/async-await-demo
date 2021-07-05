@@ -10,22 +10,22 @@ import SwiftUI
 struct MainArticleView: View {
     
     private let article: Article
-    private let size: CGSize
+    private let proxy: GeometryProxy
     
-    init(article: Article, size: CGSize) {
+    init(article: Article, geometryProxy: GeometryProxy) {
         self.article = article
-        self.size = size
+        proxy = geometryProxy
     }
     
     var body: some View {
         ZStack {
-            AsyncImage(url: URL(string: article.urlToImage ?? ""), scale: size.height / size.width) { phase in
+            AsyncImage(url: URL(string: article.urlToImage ?? ""), scale: proxy.size.height / proxy.size.width) { phase in
                 switch phase {
                 case let .success(image):
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: size.width, height: size.height)
+                        .frame(width: proxy.size.width, height: proxy.size.height)
                 case .empty:
                     ProgressView()
                 default:
@@ -37,15 +37,17 @@ struct MainArticleView: View {
                 .opacity(0.6)
             VStack(alignment: .leading, spacing: 8) {
                 Spacer()
-                Text((article.author ?? "").isEmpty ? "" : "\(article.author ?? ""):")
+                Text(article.author ?? "")
                     .foregroundColor(.white)
-                    .font(.subheadline)
+                    .font(.largeTitle)
                 Text(article.title ?? "")
                     .font(.title2)
                     .foregroundColor(.white)
+                    .padding(.bottom, 50)
             }
             .padding()
-            .frame(width: size.width, height: size.height)
+            .frame(width: proxy.size.width, height: proxy.size.height)
         }
     }
 }
+
