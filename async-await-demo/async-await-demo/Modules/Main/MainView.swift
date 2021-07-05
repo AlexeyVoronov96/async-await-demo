@@ -16,13 +16,33 @@ struct MainView: View {
     }
     
     var body: some View {
-        List(viewModel.topHeadlines, id: \.self) { article in
-            Text(article.title ?? "")
-        }
-        .onAppear {
-            async {
-                await viewModel.getArticles()
+        GeometryReader { proxy in
+            TabView(content: {
+                ForEach(viewModel.topHeadlines) { article in
+                    MainArticleView(article: article, size: proxy.size)
+                        .rotationEffect(.init(degrees: -90))
+                        .ignoresSafeArea(.all)
+                }
+            })
+            .onAppear {
+                getArticles()
             }
+            .rotationEffect(.init(degrees: 90))
+            .ignoresSafeArea(.all)
+            .frame(width: proxy.size.height)
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .frame(width: proxy.size.width)
+        }
+        .ignoresSafeArea(.all)
+        .preferredColorScheme(.dark)
+    }
+}
+
+private extension MainView {
+    
+    func getArticles() {
+        async {
+            await viewModel.getArticles()
         }
     }
 }
