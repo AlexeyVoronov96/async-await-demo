@@ -19,21 +19,19 @@ struct MainView: View {
         GeometryReader { proxy in
             TabView(content: {
                 ForEach(viewModel.topHeadlines) { article in
-                    MainArticleView(article: article, size: proxy.size)
+                    MainArticleView(article: article, geometryProxy: proxy)
                         .rotationEffect(.init(degrees: -90))
-                        .ignoresSafeArea(.all)
                 }
             })
             .onAppear {
                 getArticles()
             }
             .rotationEffect(.init(degrees: 90))
-            .ignoresSafeArea(.all)
             .frame(width: proxy.size.height)
             .tabViewStyle(.page(indexDisplayMode: .never))
             .frame(width: proxy.size.width)
         }
-        .ignoresSafeArea(.all)
+        .ignoresSafeArea(.all, edges: .vertical)
         .preferredColorScheme(.dark)
     }
 }
