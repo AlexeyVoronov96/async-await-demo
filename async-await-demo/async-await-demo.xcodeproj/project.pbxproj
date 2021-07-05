@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0DBAC92692F5FC00681217 /* MainArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0DBAC82692F5FC00681217 /* MainArticleView.swift */; };
 		AB785AE72690EDFC00DC3DE7 /* async_await_demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785AE62690EDFC00DC3DE7 /* async_await_demoApp.swift */; };
 		AB785AE92690EDFC00DC3DE7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB785AE82690EDFC00DC3DE7 /* MainView.swift */; };
 		AB785AEB2690EE0000DC3DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB785AEA2690EE0000DC3DE7 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB0DBAC82692F5FC00681217 /* MainArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainArticleView.swift; sourceTree = "<group>"; };
 		AB785AE32690EDFC00DC3DE7 /* async-await-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "async-await-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB785AE62690EDFC00DC3DE7 /* async_await_demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = async_await_demoApp.swift; sourceTree = "<group>"; };
 		AB785AE82690EDFC00DC3DE7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB0DBAC72692F5DB00681217 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB0DBAC82692F5FC00681217 /* MainArticleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AB785ADA2690EDFC00DC3DE7 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 		AB785B082691004F00DC3DE7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AB0DBAC72692F5DB00681217 /* Views */,
 				AB785AE82690EDFC00DC3DE7 /* MainView.swift */,
 				AB785B0B269100D700DC3DE7 /* MainViewModel.swift */,
 				AB785B0D2691040B00DC3DE7 /* MainViewConfigurator.swift */,
@@ -242,6 +253,7 @@
 				AB785B042690FB5D00DC3DE7 /* DependencyStore.swift in Sources */,
 				AB785AE72690EDFC00DC3DE7 /* async_await_demoApp.swift in Sources */,
 				AB785B102691055100DC3DE7 /* NewsService.swift in Sources */,
+				AB0DBAC92692F5FC00681217 /* MainArticleView.swift in Sources */,
 				AB785AFA2690F06D00DC3DE7 /* Endpoint.swift in Sources */,
 				AB785B0E2691040B00DC3DE7 /* MainViewConfigurator.swift in Sources */,
 				AB785AF72690F04800DC3DE7 /* NetworkProvider.swift in Sources */,

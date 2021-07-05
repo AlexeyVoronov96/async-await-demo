@@ -20,6 +20,9 @@ struct Article: Decodable {
     let urlToImage: String?
 }
 
-extension Article: Hashable {
+extension Article: Identifiable {
     
+    var id: String {
+        (title ?? "") + (description ?? "")
+    }
 }
