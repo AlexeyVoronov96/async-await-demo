@@ -26,11 +26,11 @@ class NetworkProvider<T: Endpoint> {
         self.decoder = decoder
     }
     
-    func getData<Model: Decodable>(from endpoint: T, with type: Model.Type) async throws -> Model {
+    func getData<Model: Decodable>(from endpoint: T) async throws -> Model {
         let request = try performRequest(for: endpoint)
         
         let data = try await loadData(with: request)
-        let decodedData = try decoder.decode(type, from: data)
+        let decodedData = try decoder.decode(Model.self, from: data)
         
         return decodedData
     }
