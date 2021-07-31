@@ -17,7 +17,7 @@ class NewsService: NewsServiceProtocol {
     @Injected var apiProvider: NetworkProvider<NewsEndpoint>
     
     func getTopArticles() async throws -> Articles {
-        let response = try await apiProvider.getData(from: .getTopHeadlines, with: ArticlesResponse.self)
+        let response: ArticlesResponse = try await apiProvider.getData(from: .getTopHeadlines)
         return response.articles
     }
 }
